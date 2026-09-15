@@ -1,0 +1,25 @@
+info:
+  name: Create user age as string
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/users"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Ivan",
+        "surname": "Ivanov",
+        "phone": "+79000000017",
+        "age": "25"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

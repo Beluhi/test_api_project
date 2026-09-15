@@ -1,0 +1,9 @@
+# команда для запуска нагрузочного теста
+locust -f locustfile.py \
+  --host http://127.0.0.1:8080 \
+  --headless \
+  --users 10 \
+  --spawn-rate 2 \
+  --run-time 1m \
+  --html reports/load_test_report.html \
+  --csv reports/load_test
