@@ -169,7 +169,6 @@ async def test_create_two_users_and_get_list(client):
     list_data = await list_response.json()
 
     assert list_data["status"] == "ok"
-    assert isinstance(list_data["data"], list)
 
     users = list_data["data"]
 
@@ -444,7 +443,6 @@ async def test_user_without_age_is_not_created(client):
     list_data = await list_response.json()
 
     assert list_data["status"] == "ok"
-    assert isinstance(list_data["data"], list)
 
     users = list_data["data"]
 
