@@ -53,7 +53,6 @@ async def create_user(request: web.Request) -> web.Response:
             return web.json_response({"status": "fail", "reason": "Phone already exists"}, status=409)
     return web.json_response({"status": "ok", "data": dict(row)}, status=201)
 
-
 # обновление пользователя
 async def update_user(request: web.Request) -> web.Response:
     user_id = int(request.match_info["id"])
@@ -82,7 +81,6 @@ async def update_user(request: web.Request) -> web.Response:
         return web.json_response({"status": "fail", "reason": "User not found"}, status=404)
 
     return web.json_response({"status": "ok", "data": dict(row)})
-
 
 # удаление пользователя
 async def delete_user(request: web.Request) -> web.Response:
